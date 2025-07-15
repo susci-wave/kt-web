@@ -177,6 +177,8 @@ iP[Ge(0x116a)]=function iS(iT,iU,iV,iW,iX){var Gh=Ge,iY=![];for(var iZ=iX[Gh(0x1
         let vv = document.querySelector('div[id*=vodbox]');
         if(vv && vv.classList && !vv.classList.contains('videoFull')){
             vv.classList.add('videoFull')
+            vv.style.setProperty('width', window.screen.availWidth + 'px', 'important');
+            vv.style.setProperty('height', window.screen.availHeight + 'px', 'important');
             clearInterval(ii)
 			//viewTVs()
         }
@@ -241,6 +243,8 @@ function viewTVs(){
 	if(vv.style.width.indexOf(ww+'%') > -1 ){
 		vv.style.setProperty('width', '', '');
 		moveTagert = 'pid';
+        vv.style.setProperty('width', window.screen.availWidth + 'px', 'important');
+        vv.style.setProperty('height', window.screen.availHeight + 'px', 'important');
 		return;
 	}else{
 		vv.style.setProperty('width', ww+'%', 'important');
