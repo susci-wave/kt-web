@@ -1,0 +1,26 @@
+<html>
+    <body style="text-align: center;">
+        <h1>仅供学习交流 请于24小时之内删除</h1>
+        <h3 style="color: blue;">点击确认/OK键确认已读并继续</h3>
+        <h5>功能:</h5>
+        <p>
+            全屏状态: 上下键换台; 双击确认/OK键刷新; 菜单键切换频道列表;<br/>
+            列表状态: 上下键切换选项; 确认/OK键进入频道; 菜单键返回全屏;<br/>
+            双击返回键退出
+        </p>
+        <h5>已知的问题</h5>
+        <p>
+            偶尔卡死,需双击OK键刷新 <br/>
+            启动和换台较慢; <br/>
+            按键操作有延迟; <br/>
+            连续播放时设备温度80+
+        </p>
+    </body>
+    <script>
+        function doAction(opt){
+            if(opt == 'center'){
+                window.location.href = window.location.origin +'/tv/home' + window.location.search;
+            }
+        }
+    </script>
+</html>
