@@ -186,11 +186,14 @@ fun Greeting(sharedPreferences: SharedPreferences, modifier: Modifier = Modifier
                     mediaPlaybackRequiresUserGesture = false  // 允许自动播放
                     userAgentString = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
                 }
+                //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                //    WebView.setWebContentsDebuggingEnabled(true);
+                //}
                 val pid = sharedPreferences.getString("pid", "600001859");
                 toast("view " + pid);
                 val host = getHost();
-//                loadUrl(host + "/index.html?pid="+pid);
-                loadUrl(host + "/tv/home?pid="+pid)
+                loadUrl(host + "/index.html?pid="+pid);
+//                loadUrl(host + "/tv/home?pid="+pid)
             }
             onWebViewCreated(webView)
             return@AndroidView webView
